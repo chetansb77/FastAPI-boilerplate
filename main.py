@@ -1,15 +1,9 @@
 from fastapi import FastAPI
+from app.blog import schemas as blogschemas
 
 app = FastAPI()
 
 
-@app.get('/')
-def index():
-    return {'data': {
-        'name': "Chetan"
-    }}
-
-
-@app.get('/about')
-def about():
-    return {'data': 'about details'}
+@app.post('/create-blog')
+def create_blog(blog: blogschemas.Blog):
+    return blog

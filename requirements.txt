@@ -1,3 +1,9 @@
 # Rest API
 fastapi
 uvicorn
+
+# Database ORM
+SQLAlchemy
+
+#Config Libraries
+python-decouple
