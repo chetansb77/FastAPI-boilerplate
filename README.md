@@ -27,3 +27,8 @@ Running the follwing command will serve the API at this URL: http://127.0.0.1:80
 ```
 uvicorn main:app --reload
 ```
+
+## Documentation
+FastAPI provides two different types of API Documentation
+1. Swagger API Documentation: http://127.0.0.1:8000/docs
+2. Redocs API Documentation: http://127.0.0.1:8000/redoc
