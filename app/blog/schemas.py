@@ -7,3 +7,8 @@ class Blog(BaseModel):
     description: str
     body: str
     published: Optional[bool]
+
+
+class ShowBlog(Blog):
+    class Config():
+        orm_mode = True
