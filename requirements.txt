@@ -5,5 +5,12 @@ uvicorn
 # Database ORM
 SQLAlchemy
 
-#Config Libraries
+# Config Libraries
 python-decouple
+
+# Pwd Hashing
+passlib
+bcrypt
+
+# Unit Test
+pytest
