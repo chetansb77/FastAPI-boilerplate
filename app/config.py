@@ -1,14 +1,10 @@
+from logging import debug
+import os
 from decouple import config
 
 
 class AppConfig:
+    connection_string: str = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=" + config('SERVER') + ";Database=" + config(
+        'DATABASE_NAME') + ";UID=" + config('DBUSER') + ";PWD=" + config('DBPWD') + ";Mars_Connection=Yes"
 
-    def __init__(self) -> None:
-        self.db_connection_string = config('SQLLITE_CONNECTION_STRING')
-
-
-class PostgreSQLConfig(AppConfig):
-
-    def __init__(self) -> None:
-        super().__init__()
-        self.db_connection_string = config('POSTGRESQL_CONNECTION_STRING')
+app_config = AppConfig()

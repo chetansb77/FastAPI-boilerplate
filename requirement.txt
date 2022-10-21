@@ -1,0 +1,21 @@
+# API
+fastapi
+uvicorn[standard]
+python-decouple
+requests
+python-multipart
+gunicorn
+uvloop
+httptools
+
+# DATABASE
+pyodbc
+
+# OTHERS
+pandas
+python-datamuse
+tqdm
+sklearn
+pytest
+coverage
+shortuuid

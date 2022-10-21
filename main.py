@@ -1,15 +1,26 @@
-from fastapi import FastAPI
-from app import models
-from app.db import engine
-from app.routers import blogs, users
+from fastapi import FastAPI, Request
+import time
+from typing import Union
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(
-    title="Fast API template project",
-    description="Template Project for reference and quick start",
-    version="1.0.0"
-    )
 
-models.Base.metadata.create_all(bind=engine)
+app = FastAPI()
 
-app.include_router(blogs.router)
-app.include_router(users.router)
+
+@app.get("/")
+def read_root():
+    return "Server is Up"
+
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+

@@ -1,0 +1,9 @@
+env/
+docs/
+.vscode/
+.pytest_cache
+__pycache__/
+README.md
+start_server.bat
+startup.sh
+test/

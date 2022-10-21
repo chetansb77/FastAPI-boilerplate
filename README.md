@@ -1,34 +1,36 @@
-# FastAPI Template
+# dAIzy-API
 
-This is a ready to go FastAPI template with a decent project folder structure.<br/>
+## Intro
+FastAPI application - https://fastapi.tiangolo.com/
 
+## Installation
+#### Create Environment
+`python -m venv env`
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine.
+#### Activate Environment
+if Windows: `env\Scripts\activate`  <br/>
+if Ubuntu: `source env/bin/activate`
 
-### Prerequisites
-Create a new python environment
-```
-python -m venv env
-```
+#### Installing requirements
+`pip install -r requirements.txt`
 
-Activate the environment
-```
-env\Scripts\activate
-```
+#### Run the server
+`start_server.bat`
+or
+`uvicorn main:app`
 
-You should first install all the dependency libraries by running the following command
-```
-python setup.py
-```
+## Test Suite
 
-## Running the FastAPI Application
-Running the follwing command will serve the API at this URL: http://127.0.0.1:8000
-```
-uvicorn main:app --reload
-```
+### Run test
+`pytest test`
 
-## Documentation
-FastAPI provides two different types of API Documentation
-1. Swagger API Documentation: http://127.0.0.1:8000/docs
-2. Redocs API Documentation: http://127.0.0.1:8000/redoc
+### Run Coverage
+`coverage run -m pytest`
+
+### Generate HTML report
+`coverage html` <br/>
+Open htmlcov/index.html
+
+## Project Contents
+- `/docs` - Contains Architecture Diagrams, ER-Diagrams etc
+- `/resources` - Contains resource files (.json, .xlsx, .csv etc)
